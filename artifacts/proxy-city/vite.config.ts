@@ -15,6 +15,12 @@ export default defineConfig({
   vite: {
     server: {
       allowedHosts: true,
+      cors: {
+        origin: [
+          /^https?:\/\/(?:[a-z0-9-]+\.)*sisko\.replit\.dev$/i,
+          /^https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?$/i,
+        ],
+      },
     },
   },
 });
