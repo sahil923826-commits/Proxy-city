@@ -1,0 +1,30 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "SlIwuWiVTXO2Bl31OKOEz"
+uri = "file://generated-artifacts/proxycity-dashboard-desktop.jpg"
+type = "image"
+title = "ProxyCity Dashboard — Desktop"
+description = "Desktop view captured at 1440 × 900."
+logical_id = "bbe71f37-8bb6-438e-a131-9a780d8c1f4f"
+content_hash = "sha256:b2b9f10523f94c2744e17a59472f29077dd4e7cbf6ff2ff98a5dbe921b182644"
+size = 113341
+mtime_ms = 1793195079904
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:fa904b8c-69ee-4b7d-8ca4-4c77c22bdd77/bbe71f37-8bb6-438e-a131-9a780d8c1f4f/9521233e-d549-42e1-b4e1-a05a067451bb"
+storage_version_token = "1793195093815647"
+content_type = "image/jpeg"
+
+[[outputs]]
+id = "ddO4PL5GX0yP96wOn159F"
+uri = "file://generated-artifacts/proxycity-purchase-traffic-desktop.jpg"
+type = "image"
+title = "ProxyCity Purchase Traffic — Desktop"
+description = "Full desktop page captured at 1440 × 900."
+logical_id = "a4f54adf-1f1f-4a9c-9d15-17c7414cfe87"
+content_hash = "sha256:0f1649b423ecd6b036f8787ec2139452a1dcfea7d3707b6a33251a59378f85c2"
+size = 108064
+mtime_ms = 1793195082660
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:fa904b8c-69ee-4b7d-8ca4-4c77c22bdd77/a4f54adf-1f1f-4a9c-9d15-17c7414cfe87/d1712ada-f63f-45ab-807c-d1636c940e8b"
+storage_version_token = "1793195095119065"
+content_type = "image/jpeg"
