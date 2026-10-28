@@ -1,0 +1,193 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ProxyCity — Royal Purple Tech. Single dark theme. */
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-background-2: var(--background-2);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-brand: var(--brand);
+  --color-lavender: var(--lavender);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-soft: var(--shadow-soft-v);
+  --shadow-button: var(--shadow-button-v);
+  --spacing-page: var(--space-page);
+  --spacing-panel: var(--space-panel);
+  --spacing-cards: var(--space-cards);
+  --spacing-fields: var(--space-fields);
+  --spacing-label: var(--space-label);
+  --spacing-heading: var(--space-heading);
+}
+
+:root {
+  --space-page: 1rem;
+  --space-panel: 1rem;
+  --space-cards: 0.75rem;
+  --space-fields: 0.75rem;
+  --space-label: 0.25rem;
+  --space-heading: 0.75rem;
+  --radius: 0.75rem;
+  --background: #0A0614;
+  --background-2: oklch(0.155 0.03 300); /* #0F0A1A */
+  --foreground: #F8FAFC;
+  --card: #150B22;
+  --card-foreground: oklch(0.984 0.003 248);
+  --popover: oklch(0.185 0.045 305);
+  --popover-foreground: oklch(0.984 0.003 248);
+  --primary: #7C3AED;
+  --primary-foreground: #F8FAFC;
+  --brand: #A855F7;
+  --lavender: #C084FC;
+  --secondary: oklch(0.21 0.05 305);
+  --secondary-foreground: oklch(0.984 0.003 248);
+  --muted: oklch(0.2 0.04 305);
+  --muted-foreground: oklch(0.712 0.013 286); /* #A1A1AA */
+  --accent: oklch(0.25 0.08 300);
+  --accent-foreground: oklch(0.722 0.177 306);
+  --destructive: oklch(0.711 0.166 22); /* #F87171 */
+  --destructive-foreground: oklch(1 0 0);
+  --success: oklch(0.723 0.192 149); /* #22C55E */
+  --border: #30203F;
+  --input: #30203F;
+  --ring: #A855F7;
+  --sidebar: oklch(0.125 0.02 300); /* #0B0812 */
+  --sidebar-foreground: oklch(0.85 0.01 286);
+  --sidebar-primary: oklch(0.541 0.247 293);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.21 0.07 300);
+  --sidebar-accent-foreground: oklch(0.722 0.177 306);
+  --sidebar-border: oklch(0.22 0.04 305);
+  --sidebar-ring: oklch(0.627 0.233 304);
+  --shadow-soft-v: 0 1px 0 0 oklch(1 0 0 / 3%) inset, 0 8px 24px -16px oklch(0 0 0 / 60%);
+  --shadow-button-v: 0 6px 18px -8px color-mix(in oklab, var(--primary) 60%, transparent);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --space-page: 1.125rem;
+    --space-panel: 1rem;
+    --space-cards: 0.875rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 820px) {
+  :root {
+    --space-page: 1rem;
+    --space-panel: 0.875rem;
+    --space-cards: 0.75rem;
+    --space-fields: 0.625rem;
+    --space-heading: 0.625rem;
+    --space-label: 0.125rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@utility panel {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility traffic-stat {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--brand) 10%, var(--card)),
+    var(--card) 72%
+  );
+  border-color: color-mix(in oklab, var(--brand) 30%, var(--border));
+  box-shadow:
+    var(--shadow-soft-v),
+    0 12px 28px -22px color-mix(in oklab, var(--brand) 75%, transparent);
+}
+
+@utility traffic-stat-icon {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid color-mix(in oklab, var(--brand) 38%, var(--border));
+  border-radius: 0.75rem;
+  background-color: color-mix(in oklab, var(--brand) 16%, var(--card));
+  color: var(--lavender);
+}
+
+@utility field {
+  width: 100%;
+  height: 2.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  padding: 0 0.875rem;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  outline: none;
+  transition: border-color 150ms, box-shadow 150ms;
+  &::placeholder {
+    color: var(--color-muted-foreground);
+  }
+  &:focus {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-brand) 20%, transparent);
+  }
+}

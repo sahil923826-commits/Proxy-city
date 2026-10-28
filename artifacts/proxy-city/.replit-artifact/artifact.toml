@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ProxyCity"
+description = "The imported ProxyCity app for managing proxy traffic, configuring plans, and reviewing payment options."
+version = "1.0.0"
+id = "artifacts/proxy-city"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23177
+
+[services.development]
+run = "pnpm --filter @workspace/proxy-city run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/proxy-city", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/proxy-city/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23177"
+BASE_PATH = "/"
